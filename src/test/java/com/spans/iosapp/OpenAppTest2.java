@@ -14,7 +14,7 @@ import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.ios.IOSDriver;
 
-public class OpenAppTest {
+public class OpenAppTest2 {
 
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		
@@ -29,7 +29,10 @@ public class OpenAppTest {
 		
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		
-		driver.findElementByXPath("//*[@name='Browse']").click();
+		
+	
+		
+		driver.findElementByIosNsPredicate("name=='Browse'").click();
 		Thread.sleep(3000);
 		
 		
